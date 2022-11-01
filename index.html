@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container mx-auto shadow-lg grid grid-rows-2">
+      <div class="mx-8 my-6">
+        <span class="text-2xl text-gray-500">Task List</span>
+        <form id="task-form" class="mt-8">
+          <div class="relative">
+            <input
+              type="text"
+              name="task"
+              placeholder="New Task"
+              id="task"
+              class="peer w-full border-b-2 p-2 placeholder-transparent focus:outline-none focus:border-teal-500"
+            />
+            <label
+              for="task"
+              class="absolute -top-3.5 left-1.5 text-sm text-teal-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:left-1.5 peer-focus:text-sm peer-focus:text-teal-500"
+              >New Task</label
+            >
+          </div>
+          <input
+            type="submit"
+            value="Add Task"
+            class="bg-teal-500 px-5 py-2 text-white rounded my-4 uppercase hover:bg-teal-400 hover:drop-shadow-lg cursor-pointer"
+          />
+        </form>
+      </div>
+      <div class="mx-8 my-6">
+        <h5 id="task-title" class="text-xl mb-8">Tasks</h5>
+        <div class="relative">
+          <input
+            type="text"
+            name="filter"
+            id="filter"
+            placeholder="l"
+            class="peer w-full border-b-2 p-2 placeholder-transparent focus:outline-none focus:border-teal-500"
+          />
+          <label
+            for="filter"
+            class="absolute -top-3.5 left-1.5 text-sm text-teal-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:left-1.5 peer-focus:text-sm peer-focus:text-teal-500"
+            >Filter Tasks</label
+          >
+        </div>
+        <ul class="p-4 border-b-2 border-b-gray-200 my-6" id="task-list"></ul>
+        <a
+          href="#"
+          id="clear-btn"
+          class="bg-black text-white px-5 py-3 rounded my-4 uppercase hover:drop-shadow-lg"
+          >Clear Tasks</a
+        >
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </body>
+</html>
